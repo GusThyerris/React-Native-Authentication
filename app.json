@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "autheticator_react-native-firebase",
-    "slug": "autheticator_react-native-firebase",
+    "name": "firebaseApp",
+    "slug": "firebaseApp",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
