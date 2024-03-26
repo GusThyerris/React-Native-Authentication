@@ -1,6 +1,6 @@
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=FFA500&height=180&section=header&animation=twinkling"/>
 
-# Diário com React Native Expo e Firebase Authenticator
+# Diário com React Native Expo e Firebase Diary
 
 Este projeto é um diário pessoal desenvolvido em React Native com Expo e Firebase Authenticator, permitindo aos usuários fazer login, registrar novas contas e fazer anotações pessoais em sua home principal.
 
