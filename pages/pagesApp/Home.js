@@ -1,7 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, TextInput } from 'react-native';
+import React, {useState, useEffect} from 'react';
+import { StyleSheet, Text, View, FlatList, TouchableOpacity, Alert, TextInput } from 'react-native';
+import Firebase from '../Firebase';
+import { MaterialCommunityIcons} from '@expo/vector-icons';
 
 export default function Home({ navigation }) {
+
+  const [diario, setDiario] = useState([]);
+  function deleteDiario(id){
+    Firebase.collection("diario").doc(id).delete();
+  }
+
   return (
     <View style={styles.container}>
 
