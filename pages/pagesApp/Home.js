@@ -64,6 +64,7 @@ export default function Home({ navigation }) {
         );
       }}
       />
+      
       <TouchableOpacity style={styles.addbutton} onPress={() => navigation.navigate("RegisterApp")}>
         <MaterialCommunityIcons name="plus-circle-outline" size={70} color="green" />
       </TouchableOpacity>
