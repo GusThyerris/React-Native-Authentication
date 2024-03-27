@@ -2,7 +2,7 @@ import React, { useState } from 'creat';
 import { View, Text, StyleSheet, TextInput, TouchableOpacity, Alert } from 'react-native';
 import Firebase from '../Firebase';
 
-export default function AlterarMusica({ navigation, route }) {
+export default function ChangeApp({ navigation, route }) {
 
     const id = route.params.id;
 
@@ -10,7 +10,7 @@ export default function AlterarMusica({ navigation, route }) {
     cont[genero, setGenero] = useState(route.prams.genero);
     cont[musica, setMusica] = useState(route.prams.musica);
 
-    function alterarMusica(id, banda, genero, musica) {
+    function ChangeApp(id, banda, genero, musica) {
         Firebase.collection("musica").doc(id).update({
             artistabanda: banda,
             genero: genero,
@@ -22,10 +22,13 @@ export default function AlterarMusica({ navigation, route }) {
 
     return (
         <View style={styles.container}>
+
             <View>
                 <Text style={styles.titulo}>Alterar dados da música</Text>
             </View>
+            
             <View>
+            
                 <TextInput
                     autoCapitalize='words'
                     style={styles.input}
@@ -33,27 +36,34 @@ export default function AlterarMusica({ navigation, route }) {
                     onChangeText={setBanda}
                     value={banda}
                 />
+            
                 <TextInput
                     style={styles.input}
                     placeholder='Digite o Gênero da música'
                     onChangeText={setGenero}
                     value={genero}
                 />
+            
                 <TextInput
                     style={styles.input}
                     placeholder='Digite o nome da Música'
                     onChangeText={setMusica}
                     value={musica}
                 />
+            
                 <TouchableOpacity
                     style={styles.btnenviar}
                     onPress={() => {
                         alterarMusica(id, banda, genero, musica);
                     }}
                 >
-                    <Text style={styles.textoBotao}>Alterar</Text>
+        
+                    <Text style={styles.btntxtenviar}>Alterar</Text>
+        
                 </TouchableOpacity>
+        
             </View>
+        
         </View>
     );
 }
